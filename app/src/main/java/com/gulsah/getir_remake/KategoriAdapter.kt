@@ -3,6 +3,7 @@ package com.gulsah.getir_remake
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.navigation.Navigation
 import androidx.recyclerview.widget.RecyclerView
 import com.google.android.material.snackbar.Snackbar
 import com.gulsah.getir_remake.databinding.KategoriCardBinding
@@ -33,9 +34,13 @@ class KategoriAdapter(var mContext: Context, var kategorilerListesi: List<Katego
                 mContext.packageName
             )
         )
+        holder.tasarim.textViewFiyat.text = kategori.fiyat.toString()
         holder.tasarim.textViewKategoriAdi.text = kategori.kategori_adi
+        holder.tasarim.textViewGram.text = kategori.gram
         holder.tasarim.kategoriCard.setOnClickListener {
-            Snackbar.make(it, kategori.kategori_adi, Snackbar.LENGTH_SHORT).show()
+
+            val gecis = AnasayfaFragmentDirections.detayGecis(kategori)
+            Navigation.findNavController(it).navigate(gecis)
         }
 
     }

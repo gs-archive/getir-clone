@@ -13,6 +13,9 @@
         <action
             android:id="@+id/action_anasayfaFragment_to_searchFragment2"
             app:destination="@id/searchFragment" />
+        <action
+            android:id="@+id/detayGecis"
+            app:destination="@id/detayFragment" />
     </fragment>
     <fragment
         android:id="@+id/profileFragment"
@@ -37,4 +40,13 @@
         android:name="com.gulsah.getir_remake.PromotionFragment"
         android:label="fragment_promotion"
         tools:layout="@layout/fragment_promotion" />
+    <fragment
+        android:id="@+id/detayFragment"
+        android:name="com.gulsah.getir_remake.DetayFragment"
+        android:label="fragment_detay"
+        tools:layout="@layout/fragment_detay" >
+        <argument
+            android:name="detayNesne"
+            app:argType="com.gulsah.getir_remake.Kategoriler" />
+    </fragment>
 </navigation>
