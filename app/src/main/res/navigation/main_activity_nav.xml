@@ -9,5 +9,32 @@
         android:id="@+id/anasayfaFragment"
         android:name="com.gulsah.getir_remake.AnasayfaFragment"
         android:label="AnasayfaFragment"
-        tools:layout="@layout/fragment_anasayfa"/>
+        tools:layout="@layout/fragment_anasayfa">
+        <action
+            android:id="@+id/action_anasayfaFragment_to_searchFragment2"
+            app:destination="@id/searchFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.gulsah.getir_remake.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_promotionFragment2"
+            app:destination="@id/promotionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="com.gulsah.getir_remake.SearchFragment"
+        android:label="fragment_search"
+        tools:layout="@layout/fragment_search" >
+        <action
+            android:id="@+id/action_searchFragment_to_profileFragment2"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/promotionFragment"
+        android:name="com.gulsah.getir_remake.PromotionFragment"
+        android:label="fragment_promotion"
+        tools:layout="@layout/fragment_promotion" />
 </navigation>

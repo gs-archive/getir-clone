@@ -6,7 +6,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
-import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import androidx.viewbinding.ViewBinding
 import com.gulsah.getir_remake.databinding.FragmentAnasayfaBinding
@@ -20,6 +19,7 @@ class AnasayfaFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
+
         tasarim = DataBindingUtil.inflate(inflater, R.layout.fragment_anasayfa, container, false)
 
         tasarim.rvkategori.layoutManager =
